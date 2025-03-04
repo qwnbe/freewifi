@@ -9,29 +9,45 @@
             text-align: center;
             font-family: Arial, sans-serif;
             margin: 50px;
+            background-color: #f4f4f4;
+            color: #333;
         }
         img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
             margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         input {
-            padding: 10px;
+            padding: 12px;
             font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <h1>Получить WiFi</h1>
     <p>Теперь в этом общественном месте можно получить бесплатный WiFi</p>
-    <img src="i.webp" alt="WiFi Image">
+    <img src="i.webp" alt="Изображение с WiFi">
     <br>
     <input type="text" id="wifiInput" placeholder="Введите капчу">
-    <p>После ввода повысьте уровень звука, робот скажет вам что делать дальше!</p>
+    <p>После ввода повысьте уровень звука, робот скажет вам, что делать дальше!</p>
+
     <audio id="audio" loop>
         <source src="s.mp3" type="audio/mpeg">
         Ваш браузер не поддерживает аудио.
     </audio>
+
     <script>
         document.getElementById("wifiInput").addEventListener("input", function() {
             document.getElementById("audio").play();
